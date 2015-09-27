@@ -12,7 +12,7 @@ describe 'Fizz buzz tests' do
 
   it 'should properly execute a block' do
     str = ''
-    result = fizzbuzz(20) { |item| str << "#{item}-" }
+    result = fizzbuzz(20).each { |item| str << "#{item}-" }
     result.must_equal FIZZBUZZ_30[0..19]
     str.must_equal(FIZZBUZZ_30[0..19].map(&:to_s).join('-') + '-')
   end
